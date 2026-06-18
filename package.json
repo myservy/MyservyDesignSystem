@@ -1,0 +1,13 @@
+{
+  "name": "myservy-design-system",
+  "version": "1.0.0",
+  "description": "Myservy Design System compiled with Style Dictionary v4",
+  "type": "module",
+  "main": "build.js",
+  "scripts": {
+    "build": "node build.js"
+  },
+  "devDependencies": {
+    "style-dictionary": "^4.0.1"
+  }
+}

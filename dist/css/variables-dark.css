@@ -1,0 +1,24 @@
+/**
+ * Do not edit directly, this file was auto-generated.
+ */
+
+.dark-theme {
+  --tertiary-color: #e6e0e9; /** Textos principales, Iconos, Botones */
+  --secondary-color: #474747; /** Botones seleccionados, tablas */
+  --primary-color: #131313; /** Contenedores Primarios */
+  --background: #000000; /** Fondos */
+  --texto-texto-secundario: #c6c6c6; /** Textos secundarios */
+  --texto-textos: #e2e2e2; /** Texto regular */
+  --texto-principales: #e6e0e9; /** Textos principales, Iconos, Botones */
+  --error-background: rgba(255, 85, 85, 0.15);
+  --error-error: #ff5555;
+  --success-background: rgba(44, 228, 126, 0.15);
+  --success-success: #2ce47e;
+  --warning-warning: #ffb133;
+  --warning-background: rgba(255, 177, 51, 0.15);
+  --neutral-background: rgba(27, 114, 255, 0.15);
+  --neutral-variant: #c0d8ff;
+  --neutral-neutral: #1b72ff;
+  --botones-boton: #e6e0e9;
+  --botones-texto: #000000;
+}

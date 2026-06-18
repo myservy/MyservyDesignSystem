@@ -1,0 +1,10 @@
+{
+  "tokenSetOrder": [
+    "global",
+    "Font theme/Baseline",
+    "Typescale/Baseline",
+    "Shape/Baseline",
+    "Monochrome Neutrals/Monochrome LT",
+    "Monochrome Neutrals/Monochrome DT"
+  ]
+}

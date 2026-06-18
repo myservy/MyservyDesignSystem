@@ -1,0 +1,3 @@
+allowBuilds:
+  "@bundled-es-modules/glob": true
+  "style-dictionary": true

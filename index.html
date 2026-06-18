@@ -1,0 +1,895 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Myservy Design System</title>
+  <!-- Google Fonts: Inter (Brand) & Roboto (Plain) for Material Typography -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+    rel="stylesheet">
+  <!-- Material Symbols Outlined for Material 3 Icons -->
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+  <!-- Design System Tokens CSS -->
+  <link rel="stylesheet" href="dist/css/variables-light.css">
+  <link rel="stylesheet" href="dist/css/variables-dark.css">
+  <!-- Core layouts & Showcase styles -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <!-- Top Navigation Header -->
+  <header class="ds-header">
+    <div class="logo-area">
+      <!-- Mobile sidebar toggle -->
+      <button class="mobile-nav-toggle" id="mobileNavToggle" aria-label="Abrir navegación">
+        <span class="material-symbols-outlined">menu</span>
+      </button>
+      <div class="logo-brand-wrapper">
+        <img src="Assets/myservy_negro.png" alt="Myservy" class="logo-brand-img logo-light-only">
+        <img src="Assets/myservy_blanco.png" alt="Myservy" class="logo-brand-img logo-dark-only">
+      </div>
+      <span class="logo-text-ds">Design System</span>
+    </div>
+    <div class="header-actions">
+      <button class="theme-toggle-btn" id="themeToggle" title="Cambiar Tema">
+        <span class="material-symbols-outlined sun-icon">light_mode</span>
+        <span class="material-symbols-outlined moon-icon">dark_mode</span>
+        <span class="theme-toggle-text">Tema</span>
+      </button>
+    </div>
+  </header>
+
+  <div class="ds-layout">
+    <!-- Sidebar Navigation -->
+    <aside class="ds-sidebar" id="dsSidebar">
+      <nav class="sidebar-nav">
+        <a href="#intro" class="nav-item active">
+          <span class="material-symbols-outlined">info</span>
+          <span>Introducción</span>
+        </a>
+        <div class="nav-section-title">Tokens</div>
+        <a href="#colors" class="nav-item">
+          <span class="material-symbols-outlined">palette</span>
+          <span>Colores (Monochromatic)</span>
+        </a>
+        <a href="#typography" class="nav-item">
+          <span class="material-symbols-outlined">text_fields</span>
+          <span>Tipografía (Material)</span>
+        </a>
+        <a href="#shapes" class="nav-item">
+          <span class="material-symbols-outlined">rounded_corner</span>
+          <span>Formas (Shapes)</span>
+        </a>
+        <div class="nav-section-title">Visualización</div>
+        <a href="#components" class="nav-item">
+          <span class="material-symbols-outlined">widgets</span>
+          <span>Componentes</span>
+        </a>
+        <a href="#dashboard-preview" class="nav-item">
+          <span class="material-symbols-outlined">dashboard</span>
+          <span>Dashboard de Ejemplo</span>
+        </a>
+      </nav>
+    </aside>
+
+    <!-- Overlay for mobile sidebar -->
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+    <!-- Main Content Area -->
+    <main class="ds-main">
+      <!-- Section: Intro -->
+      <section id="intro" class="ds-section active-section">
+        <div class="section-card hero-card">
+          <h1>Myservy Design System</h1>
+          <p class="subtitle">Un sistema de diseño de Myservy (Design Tokens), llamado <strong>Monochromatic
+              Neutrals</strong> y tipografías/formas basadas en las guías oficiales de
+            <strong>Material Design</strong>.
+          </p>
+          <div class="hero-stats">
+            <div class="stat-badge">
+              <span class="material-symbols-outlined">code</span>
+              <span>Compilado con Style Dictionary v4</span>
+            </div>
+            <div class="stat-badge">
+              <span class="material-symbols-outlined">integration_instructions</span>
+              <span>Compatible con CSS / SCSS</span>
+            </div>
+            <div class="stat-badge">
+              <span class="material-symbols-outlined">smartphone</span>
+              <span>Diseño Figma Token Studio</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="section-grid">
+          <div class="section-card">
+            <h3>¿Cómo funciona?</h3>
+            <p>Los tokens se definen en formato JSON estandarizado en la carpeta <code>/tokens</code>. Usando
+              <strong>Style Dictionary v4</strong>, procesamos estos tokens y generamos:
+            </p>
+            <ul class="features-list">
+              <li><strong>CSS Variables:</strong> Para cambios dinámicos de temas en el navegador.</li>
+              <li><strong>SCSS Variables:</strong> Para compilación estática e integración óptima en proyectos Angular.
+              </li>
+              <li><strong>JS Variables:</strong> Para su uso dinámico en componentes TS/JS.</li>
+            </ul>
+          </div>
+          <div class="section-card">
+            <h3>Instrucciones de Compilación</h3>
+            <p>Para construir el Design System en tu entorno local:</p>
+            <pre class="code-block">
+<span class="comment"># 1. Instalar dependencias con pnpm (evitando scripts bloqueados)</span>
+pnpm install --ignore-scripts
+
+<span class="comment"># 2. Generar tokens compilados</span>
+pnpm run build</pre>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section: Colors -->
+      <section id="colors" class="ds-section">
+        <h2>Paleta de Colores (Monochromatic Neutrals)</h2>
+        <p class="section-desc">Esta paleta utiliza tonos neutros y variaciones monocromáticas para crear un contraste,
+          limpio y moderno. Los colores cambian dinámicamente según el tema seleccionado (Claro / Oscuro).</p>
+
+        <div class="section-card">
+          <h3>Uso de los colores</h3>
+          <div class="colors-grid">
+            <div class="color-card">
+              <div class="color-preview" style="background-color: var(--primary-color);"></div>
+              <div class="color-info">
+                <span class="color-name">Primary Color</span>
+                <span class="color-token"><code>var(--primary-color)</code></span>
+                <span class="color-desc">Contenedores Primarios</span>
+              </div>
+            </div>
+            <div class="color-card">
+              <div class="color-preview" style="background-color: var(--secondary-color);"></div>
+              <div class="color-info">
+                <span class="color-name">Secondary Color</span>
+                <span class="color-token"><code>var(--secondary-color)</code></span>
+                <span class="color-desc">Botones seleccionados, tablas</span>
+              </div>
+            </div>
+            <div class="color-card">
+              <div class="color-preview" style="background-color: var(--tertiary-color);"></div>
+              <div class="color-info">
+                <span class="color-name">Tertiary Color</span>
+                <span class="color-token"><code>var(--tertiary-color)</code></span>
+                <span class="color-desc">Textos principales, Iconos, Botones</span>
+              </div>
+            </div>
+            <div class="color-card">
+              <div class="color-preview" style="background-color: var(--background);"></div>
+              <div class="color-info">
+                <span class="color-name">Background</span>
+                <span class="color-token"><code>var(--background)</code></span>
+                <span class="color-desc">Fondos de pantalla</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="section-card">
+          <h3>Tipografía y Textos</h3>
+          <div class="colors-grid">
+            <div class="color-card">
+              <div class="color-preview" style="background-color: var(--texto-principales);"></div>
+              <div class="color-info">
+                <span class="color-name">Texto Principales</span>
+                <span class="color-token"><code>var(--texto-principales)</code></span>
+                <span class="color-desc">Textos principales, Iconos y Botones</span>
+              </div>
+            </div>
+            <div class="color-card">
+              <div class="color-preview" style="background-color: var(--texto-textos);"></div>
+              <div class="color-info">
+                <span class="color-name">Textos</span>
+                <span class="color-token"><code>var(--texto-textos)</code></span>
+                <span class="color-desc">Texto regular y de lectura</span>
+              </div>
+            </div>
+            <div class="color-card">
+              <div class="color-preview" style="background-color: var(--texto-texto-secundario);"></div>
+              <div class="color-info">
+                <span class="color-name">Texto Secundario</span>
+                <span class="color-token"><code>var(--texto-texto-secundario)</code></span>
+                <span class="color-desc">Textos informativos de segundo nivel</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="section-card">
+          <h3>Feedback & Estados</h3>
+          <div class="colors-grid">
+            <!-- Error -->
+            <div class="color-card">
+              <div class="color-preview" style="background-color: var(--error-error);"></div>
+              <div class="color-info">
+                <span class="color-name">Error Color</span>
+                <span class="color-token"><code>var(--error-error)</code></span>
+                <span class="color-desc">Alertas de error y estados críticos</span>
+              </div>
+            </div>
+            <div class="color-card">
+              <div class="color-preview" style="background-color: var(--error-background);"></div>
+              <div class="color-info">
+                <span class="color-name">Error Background</span>
+                <span class="color-token"><code>var(--error-background)</code></span>
+                <span class="color-desc">Fondo para mensajes de error</span>
+              </div>
+            </div>
+            <!-- Success -->
+            <div class="color-card">
+              <div class="color-preview" style="background-color: var(--success-success);"></div>
+              <div class="color-info">
+                <span class="color-name">Success Color</span>
+                <span class="color-token"><code>var(--success-success)</code></span>
+                <span class="color-desc">Mensajes exitosos y confirmaciones</span>
+              </div>
+            </div>
+            <div class="color-card">
+              <div class="color-preview" style="background-color: var(--success-background);"></div>
+              <div class="color-info">
+                <span class="color-name">Success Background</span>
+                <span class="color-token"><code>var(--success-background)</code></span>
+                <span class="color-desc">Fondo para mensajes exitosos</span>
+              </div>
+            </div>
+            <!-- Warning -->
+            <div class="color-card">
+              <div class="color-preview" style="background-color: var(--warning-warning);"></div>
+              <div class="color-info">
+                <span class="color-name">Warning Color</span>
+                <span class="color-token"><code>var(--warning-warning)</code></span>
+                <span class="color-desc">Alertas preventivas y notificaciones</span>
+              </div>
+            </div>
+            <div class="color-card">
+              <div class="color-preview" style="background-color: var(--warning-background);"></div>
+              <div class="color-info">
+                <span class="color-name">Warning Background</span>
+                <span class="color-token"><code>var(--warning-background)</code></span>
+                <span class="color-desc">Fondo para mensajes preventivos</span>
+              </div>
+            </div>
+            <!-- Neutral -->
+            <div class="color-card">
+              <div class="color-preview" style="background-color: var(--neutral-neutral);"></div>
+              <div class="color-info">
+                <span class="color-name">Neutral Color</span>
+                <span class="color-token"><code>var(--neutral-neutral)</code></span>
+                <span class="color-desc">Indicadores informativos base</span>
+              </div>
+            </div>
+            <div class="color-card">
+              <div class="color-preview" style="background-color: var(--neutral-background);"></div>
+              <div class="color-info">
+                <span class="color-name">Neutral Background</span>
+                <span class="color-token"><code>var(--neutral-background)</code></span>
+                <span class="color-desc">Fondo informativo neutral</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="section-card">
+          <h3>Configuración de Botones</h3>
+          <div class="colors-grid">
+            <div class="color-card">
+              <div class="color-preview" style="background-color: var(--botones-boton);"></div>
+              <div class="color-info">
+                <span class="color-name">Botón Fondo</span>
+                <span class="color-token"><code>var(--botones-boton)</code></span>
+                <span class="color-desc">Fondo para botones estándar</span>
+              </div>
+            </div>
+            <div class="color-card">
+              <div class="color-preview" style="background-color: var(--botones-texto);"></div>
+              <div class="color-info">
+                <span class="color-name">Botón Texto</span>
+                <span class="color-token"><code>var(--botones-texto)</code></span>
+                <span class="color-desc">Texto de contraste para botones estándar</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section: Typography -->
+      <section id="typography" class="ds-section">
+        <h2>Tipografía (Material Typescale)</h2>
+        <p class="section-desc">Nuestra escala tipográfica está adaptada directamente de las especificaciones de
+          Material Design utilizando la familia de marca <strong>Inter</strong> (para títulos y encabezados) y la
+          familia base <strong>Roboto</strong> (para cuerpo y etiquetas).
+        </p>
+
+        <div class="section-card">
+          <h3>Uso de laTipografía</h3>
+
+          <div class="typography-showcase">
+            <div class="typo-row">
+              <span class="typo-tag">Display Large</span>
+              <div class="typo-preview display-large">Display Large (57px)</div>
+              <div class="typo-meta">Inter Regular, 57px, -0.25px track, 64px line</div>
+            </div>
+            <div class="typo-row">
+              <span class="typo-tag">Display Medium</span>
+              <div class="typo-preview display-medium">Display Medium (45px)</div>
+              <div class="typo-meta">Inter Regular, 45px, 0px track, 52px line</div>
+            </div>
+            <div class="typo-row">
+              <span class="typo-tag">Display Small</span>
+              <div class="typo-preview display-small">Display Small (36px)</div>
+              <div class="typo-meta">Inter Regular, 36px, 0px track, 44px line</div>
+            </div>
+            <div class="typo-row">
+              <span class="typo-tag">Headline Large</span>
+              <div class="typo-preview headline-large">Headline Large (32px)</div>
+              <div class="typo-meta">Inter Regular, 32px, 0px track, 40px line</div>
+            </div>
+            <div class="typo-row">
+              <span class="typo-tag">Headline Medium</span>
+              <div class="typo-preview headline-medium">Headline Medium (28px)</div>
+              <div class="typo-meta">Inter Regular, 28px, 0px track, 36px line</div>
+            </div>
+            <div class="typo-row">
+              <span class="typo-tag">Headline Small</span>
+              <div class="typo-preview headline-small">Headline Small (24px)</div>
+              <div class="typo-meta">Inter Regular, 24px, 0px track, 32px line</div>
+            </div>
+            <div class="typo-row">
+              <span class="typo-tag">Title Large</span>
+              <div class="typo-preview title-large">Title Large (24px)</div>
+              <div class="typo-meta">Inter Medium, 24px, 0px track, 28px line</div>
+            </div>
+            <div class="typo-row">
+              <span class="typo-tag">Title Medium</span>
+              <div class="typo-preview title-medium">Title Medium (16px)</div>
+              <div class="typo-meta">Inter Medium, 16px, 0.15px track, 24px line</div>
+            </div>
+            <div class="typo-row">
+              <span class="typo-tag">Title Small</span>
+              <div class="typo-preview title-small">Title Small (14px)</div>
+              <div class="typo-meta">Inter Medium, 14px, 0.1px track, 20px line</div>
+            </div>
+            <div class="typo-row">
+              <span class="typo-tag">Body Large</span>
+              <div class="typo-preview body-large">Body Large (16px) - El texto regular se renderiza de esta manera para
+                lecturas más largas.</div>
+              <div class="typo-meta">Roboto Regular, 16px, 0.5px track, 24px line</div>
+            </div>
+            <div class="typo-row">
+              <span class="typo-tag">Body Medium</span>
+              <div class="typo-preview body-medium">Body Medium (14px) - Utilizado para textos explicativos breves o
+                párrafos generales.</div>
+              <div class="typo-meta">Roboto Regular, 14px, 0.25px track, 20px line</div>
+            </div>
+            <div class="typo-row">
+              <span class="typo-tag">Body Small</span>
+              <div class="typo-preview body-small">Body Small (12px) - Utilizado para textos pequeños de pie de página y
+                detalles adicionales.</div>
+              <div class="typo-meta">Roboto Regular, 12px, 0.4px track, 16px line</div>
+            </div>
+            <div class="typo-row">
+              <span class="typo-tag">Label Large</span>
+              <div class="typo-preview label-large">LABEL LARGE (14px)</div>
+              <div class="typo-meta">Roboto Medium, 14px, 0.1px track, 20px line</div>
+            </div>
+            <div class="typo-row">
+              <span class="typo-tag">Label Medium</span>
+              <div class="typo-preview label-medium">LABEL MEDIUM (12px)</div>
+              <div class="typo-meta">Roboto Medium, 12px, 0.5px track, 16px line</div>
+            </div>
+            <div class="typo-row">
+              <span class="typo-tag">Label Small</span>
+              <div class="typo-preview label-small">LABEL SMALL (11px)</div>
+              <div class="typo-meta">Roboto Medium, 11px, 0.5px track, 16px line</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section: Shapes -->
+      <section id="shapes" class="ds-section">
+        <h2>Formas y Bordes (Corner Radius)</h2>
+        <p class="section-desc">Los tokens de formas determinan la curvatura de las esquinas en contenedores, tarjetas,
+          alertas y botones según su tamaño. Estos valores han sido mapeados a unidades <code>px</code>.</p>
+
+        <div class="section-card">
+          <h3>Border Radius</h3>
+          <div class="shapes-grid">
+            <div class="shape-card">
+              <div class="shape-preview" style="border-radius: var(--corner-none);"></div>
+              <div class="shape-info">
+                <span class="shape-name">None</span>
+                <span class="shape-token"><code>var(--corner-none)</code></span>
+                <span class="shape-val">0px</span>
+              </div>
+            </div>
+            <div class="shape-card">
+              <div class="shape-preview" style="border-radius: var(--corner-extra-small);"></div>
+              <div class="shape-info">
+                <span class="shape-name">Extra-small</span>
+                <span class="shape-token"><code>var(--corner-extra-small)</code></span>
+                <span class="shape-val">4px</span>
+              </div>
+            </div>
+            <div class="shape-card">
+              <div class="shape-preview" style="border-radius: var(--corner-small);"></div>
+              <div class="shape-info">
+                <span class="shape-name">Small</span>
+                <span class="shape-token"><code>var(--corner-small)</code></span>
+                <span class="shape-val">8px</span>
+              </div>
+            </div>
+            <div class="shape-card">
+              <div class="shape-preview" style="border-radius: var(--corner-medium);"></div>
+              <div class="shape-info">
+                <span class="shape-name">Medium</span>
+                <span class="shape-token"><code>var(--corner-medium)</code></span>
+                <span class="shape-val">12px</span>
+              </div>
+            </div>
+            <div class="shape-card">
+              <div class="shape-preview" style="border-radius: var(--corner-large);"></div>
+              <div class="shape-info">
+                <span class="shape-name">Large</span>
+                <span class="shape-token"><code>var(--corner-large)</code></span>
+                <span class="shape-val">16px</span>
+              </div>
+            </div>
+            <div class="shape-card">
+              <div class="shape-preview" style="border-radius: var(--corner-large-increased);"></div>
+              <div class="shape-info">
+                <span class="shape-name">Large-increased</span>
+                <span class="shape-token"><code>var(--corner-large-increased)</code></span>
+                <span class="shape-val">20px</span>
+              </div>
+            </div>
+            <div class="shape-card">
+              <div class="shape-preview" style="border-radius: var(--corner-extra-large);"></div>
+              <div class="shape-info">
+                <span class="shape-name">Extra-large</span>
+                <span class="shape-token"><code>var(--corner-extra-large)</code></span>
+                <span class="shape-val">28px</span>
+              </div>
+            </div>
+            <div class="shape-card">
+              <div class="shape-preview" style="border-radius: var(--corner-extra-large-increased);"></div>
+              <div class="shape-info">
+                <span class="shape-name">Extra-large-increased</span>
+                <span class="shape-token"><code>var(--corner-extra-large-increased)</code></span>
+                <span class="shape-val">32px</span>
+              </div>
+            </div>
+            <div class="shape-card">
+              <div class="shape-preview" style="border-radius: var(--corner-extra-extra-large);"></div>
+              <div class="shape-info">
+                <span class="shape-name">Extra-extra-large</span>
+                <span class="shape-token"><code>var(--corner-extra-extra-large)</code></span>
+                <span class="shape-val">48px</span>
+              </div>
+            </div>
+            <div class="shape-card">
+              <div class="shape-preview" style="border-radius: var(--corner-full);"></div>
+              <div class="shape-info">
+                <span class="shape-name">Full</span>
+                <span class="shape-token"><code>var(--corner-full)</code></span>
+                <span class="shape-val">1000px</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section: Component Playground -->
+      <section id="components" class="ds-section">
+        <h2>Galería de Componentes en Uso</h2>
+        <p class="section-desc">Ejemplos interactivos de componentes básicos del sistema de diseño construidos
+          utilizando las variables CSS globales compiladas. Cambia el tema para ver cómo se adaptan de forma natural.
+        </p>
+
+        <!-- Buttons -->
+        <div class="section-card">
+          <h3>Botones (Buttons)</h3>
+          <p class="card-desc">Botones estilizados con variables de color y esquinas.</p>
+          <div class="component-demo-row">
+            <button class="btn btn-primary">Primary Button</button>
+            <button class="btn btn-secondary">Secondary Button</button>
+            <button class="btn btn-outline">Outline Button</button>
+            <button class="btn btn-disabled" disabled>Disabled</button>
+            <button class="btn btn-error">Error action</button>
+          </div>
+        </div>
+
+        <!-- Banners & Alerts -->
+        <div class="section-card">
+          <h3>Alertas y Estados (Banners)</h3>
+          <div class="alert alert-success">
+            <span class="material-symbols-outlined">check_circle</span>
+            <div>
+              <strong>¡Éxito total!</strong> La sincronización con el servidor se completó correctamente usando los
+              tokens.
+            </div>
+          </div>
+          <div class="alert alert-warning">
+            <span class="material-symbols-outlined">warning</span>
+            <div>
+              <strong>Atención requerida.</strong> La conexión de red es un poco inestable, pero se mantiene la sesión.
+            </div>
+          </div>
+          <div class="alert alert-error">
+            <span class="material-symbols-outlined">cancel</span>
+            <div>
+              <strong>Error crítico.</strong> No se pudo guardar el elemento debido a un conflicto de bases de datos.
+            </div>
+          </div>
+          <div class="alert alert-info">
+            <span class="material-symbols-outlined">info</span>
+            <div>
+              <strong>Nota técnica.</strong> Style Dictionary v4 maneja variables de temas de forma dinámica.
+            </div>
+          </div>
+        </div>
+
+        <!-- Cards -->
+        <div class="section-card">
+          <h3>Tarjetas de Contenedores (Cards)</h3>
+          <div class="component-demo-row">
+            <div class="demo-card radius-xs">
+              <h4>Esquina Extra-small</h4>
+              <p>Curvatura de 4px ideal para inputs o pequeños badges integrados.</p>
+            </div>
+            <div class="demo-card radius-md">
+              <h4>Esquina Medium</h4>
+              <p>Curvatura de 12px perfecta para tarjetas estándar de información y widgets.</p>
+            </div>
+            <div class="demo-card radius-xl">
+              <h4>Esquina Extra-large</h4>
+              <p>Curvatura de 28px utilizada en componentes grandes como modales o sidebars.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Table -->
+        <div class="section-card">
+          <h3>Tablas de Datos (Tables)</h3>
+          <table class="demo-table">
+            <thead>
+              <tr>
+                <th>Nombre del Token</th>
+                <th>Tipo</th>
+                <th>Valor Claro</th>
+                <th>Valor Oscuro</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><code>--primary-color</code></td>
+                <td>Color</td>
+                <td>#f9f9f9</td>
+                <td>#131313</td>
+              </tr>
+              <tr>
+                <td><code>--secondary-color</code></td>
+                <td>Color</td>
+                <td>#d4d4d4</td>
+                <td>#474747</td>
+              </tr>
+              <tr>
+                <td><code>--tertiary-color</code></td>
+                <td>Color</td>
+                <td>#1d1b20</td>
+                <td>#e6e0e9</td>
+              </tr>
+              <tr>
+                <td><code>--corner-medium</code></td>
+                <td>Shape</td>
+                <td colspan="2" class="table-center">12px</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- Section: Real-World Dashboard Preview -->
+      <section id="dashboard-preview" class="ds-section">
+        <h2>Dashboard de Ejemplo (Aplicación del Mundo Real)</h2>
+        <p class="section-desc">Un panel de administración premium interactivo construido en su totalidad con los tokens
+          de color Monochrome Neutrals y tipografía Material. Este es un ejemplo de como se debería de usar el design
+          system en una aplicación real.</p>
+
+        <div class="dashboard-container">
+          <!-- Sidebar del Dashboard -->
+          <div class="db-sidebar">
+            <div class="db-brand">
+              <div class="logo-brand-wrapper small-logo">
+                <img src="Assets/myservy_negro.png" alt="Myservy" class="logo-brand-img logo-light-only">
+                <img src="Assets/myservy_blanco.png" alt="Myservy" class="logo-brand-img logo-dark-only">
+              </div>
+            </div>
+            <div class="db-nav">
+              <a href="#" class="db-nav-item active"><span
+                  class="material-symbols-outlined">grid_view</span><span>General</span></a>
+              <a href="#" class="db-nav-item"><span
+                  class="material-symbols-outlined">monitoring</span><span>Monitoreo</span></a>
+              <a href="#" class="db-nav-item"><span
+                  class="material-symbols-outlined">group</span><span>Conductores</span></a>
+              <a href="#" class="db-nav-item"><span
+                  class="material-symbols-outlined">calendar_today</span><span>Planificación</span></a>
+              <a href="#" class="db-nav-item"><span
+                  class="material-symbols-outlined">settings</span><span>Configuración</span></a>
+            </div>
+          </div>
+
+          <!-- Contenido del Dashboard -->
+          <div class="db-content">
+            <!-- Header interno -->
+            <div class="db-header">
+              <div class="db-search">
+                <span class="material-symbols-outlined">search</span>
+                <input type="text" placeholder="Buscar viajes, conductores, alertas...">
+              </div>
+              <div class="db-user">
+                <div class="db-notification-badge">
+                  <span class="material-symbols-outlined">notifications</span>
+                  <span class="dot"></span>
+                </div>
+                <div class="avatar">M</div>
+                <span class="username">Admin Myservy</span>
+              </div>
+            </div>
+
+            <!-- Grid de estadísticas -->
+            <div class="db-stats-grid">
+              <div class="db-stat-card">
+                <div class="stat-header">
+                  <span class="stat-title">Viajes Activos</span>
+                  <div class="stat-icon"><span class="material-symbols-outlined">navigation</span></div>
+                </div>
+                <div class="stat-number">42</div>
+                <div class="stat-trend trend-up">
+                  <span class="material-symbols-outlined">trending_up</span>
+                  <span>+12% vs. ayer</span>
+                </div>
+              </div>
+              <div class="db-stat-card">
+                <div class="stat-header">
+                  <span class="stat-title">Alertas Activas</span>
+                  <div class="stat-icon"><span class="material-symbols-outlined">warning</span></div>
+                </div>
+                <div class="stat-number number-error">3</div>
+                <div class="stat-trend trend-down">
+                  <span class="material-symbols-outlined">trending_down</span>
+                  <span>-40% vs. promedio</span>
+                </div>
+              </div>
+              <div class="db-stat-card">
+                <div class="stat-header">
+                  <span class="stat-title">Conductores Conectados</span>
+                  <div class="stat-icon"><span class="material-symbols-outlined">verified_user</span></div>
+                </div>
+                <div class="stat-number">18</div>
+                <div class="stat-trend trend-up">
+                  <span class="material-symbols-outlined">trending_up</span>
+                  <span>95.4% de efectividad</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Cuerpo del dashboard -->
+            <div class="db-main-grid">
+              <!-- Gráfico e info principal -->
+              <div class="db-card main-chart-card">
+                <div class="db-card-header">
+                  <h4>Rendimiento del Sistema</h4>
+                  <div class="chart-actions">
+                    <span class="chart-tab active">Hoy</span>
+                    <span class="chart-tab">Semana</span>
+                    <span class="chart-tab">Mes</span>
+                  </div>
+                </div>
+                <!-- Simulación de gráfico premium -->
+                <div class="mock-chart-container">
+                  <svg class="chart-svg" viewBox="0 0 500 200">
+                    <defs>
+                      <linearGradient id="chartGradient" x1="0" y1="0" x2="0" y2="1">
+                        <stop offset="0%" stop-color="var(--secondary-color)" stop-opacity="0.3" />
+                        <stop offset="100%" stop-color="var(--secondary-color)" stop-opacity="0" />
+                      </linearGradient>
+                    </defs>
+                    <!-- Grid Lines -->
+                    <line x1="0" y1="40" x2="500" y2="40" stroke="var(--secondary-color)" stroke-dasharray="4"
+                      stroke-opacity="0.2" />
+                    <line x1="0" y1="90" x2="500" y2="90" stroke="var(--secondary-color)" stroke-dasharray="4"
+                      stroke-opacity="0.2" />
+                    <line x1="0" y1="140" x2="500" y2="140" stroke="var(--secondary-color)" stroke-dasharray="4"
+                      stroke-opacity="0.2" />
+                    <!-- Area -->
+                    <path d="M 0,180 Q 80,100 160,110 T 320,60 T 500,80 L 500,200 L 0,200 Z"
+                      fill="url(#chartGradient)" />
+                    <!-- Line -->
+                    <path d="M 0,180 Q 80,100 160,110 T 320,60 T 500,80" fill="none" stroke="var(--tertiary-color)"
+                      stroke-width="3" />
+                    <!-- Points -->
+                    <circle cx="160" cy="110" r="5" fill="var(--background)" stroke="var(--tertiary-color)"
+                      stroke-width="2" />
+                    <circle cx="320" cy="60" r="5" fill="var(--background)" stroke="var(--tertiary-color)"
+                      stroke-width="2" />
+                  </svg>
+                  <div class="chart-labels">
+                    <span>08:00 AM</span>
+                    <span>10:00 AM</span>
+                    <span>12:00 PM</span>
+                    <span>02:00 PM</span>
+                    <span>04:00 PM</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Listado de actividad -->
+              <div class="db-card activity-card">
+                <div class="db-card-header">
+                  <h4>Actividades Recientes</h4>
+                  <button class="text-action-btn">Ver todo</button>
+                </div>
+                <div class="db-activity-list">
+                  <div class="activity-item">
+                    <div class="activity-bullet success-bullet"></div>
+                    <div class="activity-details">
+                      <span class="activity-text">Viaje #1024 completado</span>
+                      <span class="activity-time">Hace 3 min por Conductor Carlos M.</span>
+                    </div>
+                  </div>
+                  <div class="activity-item">
+                    <div class="activity-bullet error-bullet"></div>
+                    <div class="activity-details">
+                      <span class="activity-text">Desvío de ruta alertado</span>
+                      <span class="activity-time">Hace 12 min por Vehículo AB-123</span>
+                    </div>
+                  </div>
+                  <div class="activity-item">
+                    <div class="activity-bullet warning-bullet"></div>
+                    <div class="activity-details">
+                      <span class="activity-text">Retraso en carga estimado</span>
+                      <span class="activity-time">Hace 25 min en Almacén Norte</span>
+                    </div>
+                  </div>
+                  <div class="activity-item">
+                    <div class="activity-bullet info-bullet"></div>
+                    <div class="activity-details">
+                      <span class="activity-text">Nuevo conductor registrado</span>
+                      <span class="activity-time">Hace 1 hora en sistema principal</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Tabla de asignaciones rápidas -->
+            <div class="db-card table-card">
+              <div class="db-card-header">
+                <h4>Asignación de Flota</h4>
+                <button class="btn btn-primary btn-sm"><span class="material-symbols-outlined"
+                    style="font-size:16px;">add</span><span>Asignar Chofer</span></button>
+              </div>
+              <table class="db-table">
+                <thead>
+                  <tr>
+                    <th>Vehículo</th>
+                    <th>Conductor</th>
+                    <th>Estado</th>
+                    <th>Destino</th>
+                    <th>Acciones</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><strong>Volvo XC90 (VM-102)</strong></td>
+                    <td>Esteban Paredes</td>
+                    <td><span class="badge badge-success">En Ruta</span></td>
+                    <td>Santiago Centro</td>
+                    <td><button class="icon-btn"><span class="material-symbols-outlined">more_horiz</span></button></td>
+                  </tr>
+                  <tr>
+                    <td><strong>Scania R450 (TM-992)</strong></td>
+                    <td>Jaime Valdés</td>
+                    <td><span class="badge badge-error">Detenido</span></td>
+                    <td>Valparaíso Puerto</td>
+                    <td><button class="icon-btn"><span class="material-symbols-outlined">more_horiz</span></button></td>
+                  </tr>
+                  <tr>
+                    <td><strong>Mercedes Sprinter (VM-404)</strong></td>
+                    <td>Jorge Valdivia</td>
+                    <td><span class="badge badge-warning">En Carga</span></td>
+                    <td>Concepción Bodega</td>
+                    <td><button class="icon-btn"><span class="material-symbols-outlined">more_horiz</span></button></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <footer class="ds-footer">
+    <p>&copy; 2026 Myservy. Todos los derechos reservados.</p>
+  </footer>
+
+  <!-- Theme and navigation scripts -->
+  <script>
+    // Theme Toggle Logic
+    const themeToggleBtn = document.getElementById('themeToggle');
+    const body = document.body;
+
+    // Check saved theme or default to light
+    const currentTheme = localStorage.getItem('theme') || 'light';
+    if (currentTheme === 'dark') {
+      body.classList.add('dark-theme');
+    }
+
+    themeToggleBtn.addEventListener('click', () => {
+      body.classList.toggle('dark-theme');
+      const activeTheme = body.classList.contains('dark-theme') ? 'dark' : 'light';
+      localStorage.setItem('theme', activeTheme);
+    });
+
+    // Sidebar navigation active state and scroll-into-view
+    const navItems = document.querySelectorAll('.sidebar-nav .nav-item');
+    const sections = document.querySelectorAll('.ds-section');
+    const dsSidebar = document.getElementById('dsSidebar');
+    const sidebarOverlay = document.getElementById('sidebarOverlay');
+    const mobileNavToggle = document.getElementById('mobileNavToggle');
+
+    // Mobile Sidebar controls
+    function closeSidebar() {
+      dsSidebar.classList.remove('sidebar-open');
+      sidebarOverlay.classList.remove('active');
+    }
+
+    mobileNavToggle.addEventListener('click', () => {
+      dsSidebar.classList.add('sidebar-open');
+      sidebarOverlay.classList.add('active');
+    });
+
+    sidebarOverlay.addEventListener('click', closeSidebar);
+
+    navItems.forEach(item => {
+      item.addEventListener('click', (e) => {
+        const targetId = item.getAttribute('href');
+        if (targetId && targetId.startsWith('#')) {
+          e.preventDefault();
+
+          navItems.forEach(i => i.classList.remove('active'));
+          item.classList.add('active');
+
+          sections.forEach(sec => sec.classList.remove('active-section'));
+          const targetSection = document.querySelector(targetId);
+          if (targetSection) {
+            targetSection.classList.add('active-section');
+            window.scrollTo({
+              top: 0,
+              behavior: 'smooth'
+            });
+          }
+
+          // Close drawer on mobile selection
+          closeSidebar();
+        }
+      });
+    });
+  </script>
+</body>
+
+</html>
