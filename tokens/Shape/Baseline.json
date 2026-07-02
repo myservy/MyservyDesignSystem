@@ -7,8 +7,8 @@
         ],
         "com.figma.hiddenFromPublishing": false
       },
-      "$type": "number",
-      "$value": 0
+      "$type": "dimension",
+      "$value": "0rem"
     },
     "Extra-small": {
       "$extensions": {
@@ -17,8 +17,8 @@
         ],
         "com.figma.hiddenFromPublishing": false
       },
-      "$type": "number",
-      "$value": 4
+      "$type": "dimension",
+      "$value": "0.25rem"
     },
     "Small": {
       "$extensions": {
@@ -27,8 +27,8 @@
         ],
         "com.figma.hiddenFromPublishing": false
       },
-      "$type": "number",
-      "$value": 8
+      "$type": "dimension",
+      "$value": "0.5rem"
     },
     "Medium": {
       "$extensions": {
@@ -37,8 +37,8 @@
         ],
         "com.figma.hiddenFromPublishing": false
       },
-      "$type": "number",
-      "$value": 12
+      "$type": "dimension",
+      "$value": "0.75rem"
     },
     "Large": {
       "$extensions": {
@@ -47,8 +47,8 @@
         ],
         "com.figma.hiddenFromPublishing": false
       },
-      "$type": "number",
-      "$value": 16
+      "$type": "dimension",
+      "$value": "1rem"
     },
     "Extra-large": {
       "$extensions": {
@@ -57,8 +57,8 @@
         ],
         "com.figma.hiddenFromPublishing": false
       },
-      "$type": "number",
-      "$value": 28
+      "$type": "dimension",
+      "$value": "1.75rem"
     },
     "Full": {
       "$extensions": {
@@ -67,8 +67,8 @@
         ],
         "com.figma.hiddenFromPublishing": false
       },
-      "$type": "number",
-      "$value": 1000
+      "$type": "dimension",
+      "$value": "62.5rem"
     },
     "Large-increased": {
       "$extensions": {
@@ -77,8 +77,8 @@
         ],
         "com.figma.hiddenFromPublishing": false
       },
-      "$type": "number",
-      "$value": 20
+      "$type": "dimension",
+      "$value": "1.25rem"
     },
     "Extra-large-increased": {
       "$extensions": {
@@ -87,8 +87,8 @@
         ],
         "com.figma.hiddenFromPublishing": true
       },
-      "$type": "number",
-      "$value": 32
+      "$type": "dimension",
+      "$value": "2rem"
     },
     "Extra-extra-large": {
       "$extensions": {
@@ -97,8 +97,8 @@
         ],
         "com.figma.hiddenFromPublishing": true
       },
-      "$type": "number",
-      "$value": 48
+      "$type": "dimension",
+      "$value": "3rem"
     }
   }
 }

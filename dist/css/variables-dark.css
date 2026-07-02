@@ -16,9 +16,10 @@
   --success-success: #2ce47e;
   --warning-warning: #ffb133;
   --warning-background: rgba(255, 177, 51, 0.15);
-  --neutral-background: rgba(27, 114, 255, 0.15);
+  --neutral-background: rgba(23, 170, 238, 0.15);
   --neutral-variant: #c0d8ff;
-  --neutral-neutral: #1b72ff;
+  --neutral-neutral: #17aaee;
   --botones-boton: #e6e0e9;
   --botones-texto: #000000;
+  --secondary-color-background: rgba(71, 71, 71, 0.5); /** Botones seleccionados, tablas */
 }

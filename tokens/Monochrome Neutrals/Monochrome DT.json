@@ -153,7 +153,7 @@
         "com.figma.hiddenFromPublishing": false
       },
       "$type": "color",
-      "$value": "#1b72ff26"
+      "$value": "#17aaee26"
     },
     "Variant": {
       "$extensions": {
@@ -173,7 +173,7 @@
         "com.figma.hiddenFromPublishing": false
       },
       "$type": "color",
-      "$value": "#1b72ff"
+      "$value": "#17aaee"
     }
   },
   "Botones": {
@@ -197,5 +197,16 @@
       "$type": "color",
       "$value": "#000000"
     }
+  },
+  "Secondary Color Background": {
+    "$extensions": {
+      "com.figma.scopes": [
+        "ALL_SCOPES"
+      ],
+      "com.figma.hiddenFromPublishing": false
+    },
+    "$type": "color",
+    "$value": "#47474780",
+    "$description": "Botones seleccionados, tablas"
   }
 }

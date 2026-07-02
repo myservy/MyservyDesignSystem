@@ -45,15 +45,15 @@
       "$extensions": {
         "com.figma.hiddenFromPublishing": true
       },
-      "$type": "number",
-      "$value": 0.1
+      "$type": "dimension",
+      "$value": "0.006rem"
     },
     "None": {
       "$extensions": {
         "com.figma.hiddenFromPublishing": true
       },
-      "$type": "number",
-      "$value": 0
+      "$type": "dimension",
+      "$value": "0rem"
     }
   },
   "font-size": {
@@ -64,8 +64,8 @@
         ],
         "com.figma.hiddenFromPublishing": false
       },
-      "$type": "number",
-      "$value": 57
+      "$type": "dimension",
+      "$value": "3.563rem"
     },
     "1": {
       "$extensions": {
@@ -74,8 +74,8 @@
         ],
         "com.figma.hiddenFromPublishing": false
       },
-      "$type": "number",
-      "$value": 45
+      "$type": "dimension",
+      "$value": "2.813rem"
     },
     "2": {
       "$extensions": {
@@ -84,8 +84,8 @@
         ],
         "com.figma.hiddenFromPublishing": false
       },
-      "$type": "number",
-      "$value": 36
+      "$type": "dimension",
+      "$value": "2.25rem"
     },
     "3": {
       "$extensions": {
@@ -94,8 +94,8 @@
         ],
         "com.figma.hiddenFromPublishing": false
       },
-      "$type": "number",
-      "$value": 32
+      "$type": "dimension",
+      "$value": "2rem"
     },
     "4": {
       "$extensions": {
@@ -104,8 +104,8 @@
         ],
         "com.figma.hiddenFromPublishing": false
       },
-      "$type": "number",
-      "$value": 28
+      "$type": "dimension",
+      "$value": "1.75rem"
     },
     "5": {
       "$extensions": {
@@ -114,8 +114,8 @@
         ],
         "com.figma.hiddenFromPublishing": false
       },
-      "$type": "number",
-      "$value": 24
+      "$type": "dimension",
+      "$value": "1.5rem"
     },
     "6": {
       "$extensions": {
@@ -124,8 +124,8 @@
         ],
         "com.figma.hiddenFromPublishing": false
       },
-      "$type": "number",
-      "$value": 16
+      "$type": "dimension",
+      "$value": "1rem"
     },
     "7": {
       "$extensions": {
@@ -134,8 +134,8 @@
         ],
         "com.figma.hiddenFromPublishing": false
       },
-      "$type": "number",
-      "$value": 14
+      "$type": "dimension",
+      "$value": "0.875rem"
     },
     "8": {
       "$extensions": {
@@ -144,8 +144,8 @@
         ],
         "com.figma.hiddenFromPublishing": false
       },
-      "$type": "number",
-      "$value": 12
+      "$type": "dimension",
+      "$value": "0.75rem"
     },
     "9": {
       "$extensions": {
@@ -154,8 +154,8 @@
         ],
         "com.figma.hiddenFromPublishing": false
       },
-      "$type": "number",
-      "$value": 11
+      "$type": "dimension",
+      "$value": "0.688rem"
     }
   }
 }

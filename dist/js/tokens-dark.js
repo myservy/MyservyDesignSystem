@@ -340,7 +340,7 @@ module.exports = {
         "com.figma.hiddenFromPublishing": false,
       },
       $type: "color",
-      $value: "#1b72ff26",
+      $value: "#17aaee26",
       filePath: "tokens/Monochrome Neutrals/Monochrome DT.json",
       isSource: true,
       original: {
@@ -349,7 +349,7 @@ module.exports = {
           "com.figma.hiddenFromPublishing": false,
         },
         $type: "color",
-        $value: "#1b72ff26",
+        $value: "#17aaee26",
       },
       name: "NeutralBackground",
       attributes: {
@@ -388,7 +388,7 @@ module.exports = {
         "com.figma.hiddenFromPublishing": false,
       },
       $type: "color",
-      $value: "#1b72ff",
+      $value: "#17aaee",
       filePath: "tokens/Monochrome Neutrals/Monochrome DT.json",
       isSource: true,
       original: {
@@ -397,7 +397,7 @@ module.exports = {
           "com.figma.hiddenFromPublishing": false,
         },
         $type: "color",
-        $value: "#1b72ff",
+        $value: "#17aaee",
       },
       name: "NeutralNeutral",
       attributes: {
@@ -456,5 +456,30 @@ module.exports = {
       },
       path: ["Botones", "Texto"],
     },
+  },
+  "Secondary Color Background": {
+    $extensions: {
+      "com.figma.scopes": ["ALL_SCOPES"],
+      "com.figma.hiddenFromPublishing": false,
+    },
+    $type: "color",
+    $value: "#47474780",
+    $description: "Botones seleccionados, tablas",
+    filePath: "tokens/Monochrome Neutrals/Monochrome DT.json",
+    isSource: true,
+    original: {
+      $extensions: {
+        "com.figma.scopes": ["ALL_SCOPES"],
+        "com.figma.hiddenFromPublishing": false,
+      },
+      $type: "color",
+      $value: "#47474780",
+      $description: "Botones seleccionados, tablas",
+    },
+    name: "SecondaryColorBackground",
+    attributes: {
+      category: "Secondary Color Background",
+    },
+    path: ["Secondary Color Background"],
   },
 };
