@@ -46,14 +46,14 @@
         "com.figma.hiddenFromPublishing": true
       },
       "$type": "dimension",
-      "$value": "0.006rem"
+      "$value": "0.1px"
     },
     "None": {
       "$extensions": {
         "com.figma.hiddenFromPublishing": true
       },
       "$type": "dimension",
-      "$value": "0rem"
+      "$value": "0px"
     }
   },
   "font-size": {
@@ -65,7 +65,7 @@
         "com.figma.hiddenFromPublishing": false
       },
       "$type": "dimension",
-      "$value": "3.563rem"
+      "$value": "57px"
     },
     "1": {
       "$extensions": {
@@ -75,7 +75,7 @@
         "com.figma.hiddenFromPublishing": false
       },
       "$type": "dimension",
-      "$value": "2.813rem"
+      "$value": "45px"
     },
     "2": {
       "$extensions": {
@@ -85,7 +85,7 @@
         "com.figma.hiddenFromPublishing": false
       },
       "$type": "dimension",
-      "$value": "2.25rem"
+      "$value": "36px"
     },
     "3": {
       "$extensions": {
@@ -95,7 +95,7 @@
         "com.figma.hiddenFromPublishing": false
       },
       "$type": "dimension",
-      "$value": "2rem"
+      "$value": "32px"
     },
     "4": {
       "$extensions": {
@@ -105,7 +105,7 @@
         "com.figma.hiddenFromPublishing": false
       },
       "$type": "dimension",
-      "$value": "1.75rem"
+      "$value": "28px"
     },
     "5": {
       "$extensions": {
@@ -115,7 +115,7 @@
         "com.figma.hiddenFromPublishing": false
       },
       "$type": "dimension",
-      "$value": "1.5rem"
+      "$value": "24px"
     },
     "6": {
       "$extensions": {
@@ -125,7 +125,7 @@
         "com.figma.hiddenFromPublishing": false
       },
       "$type": "dimension",
-      "$value": "1rem"
+      "$value": "16px"
     },
     "7": {
       "$extensions": {
@@ -135,7 +135,7 @@
         "com.figma.hiddenFromPublishing": false
       },
       "$type": "dimension",
-      "$value": "0.875rem"
+      "$value": "14px"
     },
     "8": {
       "$extensions": {
@@ -145,7 +145,7 @@
         "com.figma.hiddenFromPublishing": false
       },
       "$type": "dimension",
-      "$value": "0.75rem"
+      "$value": "12px"
     },
     "9": {
       "$extensions": {
@@ -155,7 +155,7 @@
         "com.figma.hiddenFromPublishing": false
       },
       "$type": "dimension",
-      "$value": "0.688rem"
+      "$value": "11px"
     }
   }
 }

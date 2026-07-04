@@ -121,6 +121,12 @@ const cssTransforms = [
 
 // Configuration for Light Theme (Base: includes colors, typography, and shapes)
 const lightConfig = {
+  log: {
+    verbosity: 'verbose'
+  },
+  include: [
+    'tokens/global.json'
+  ],
   source: [
     'tokens/Font theme/Baseline.json',
     'tokens/Typescale/Baseline.json',
@@ -135,6 +141,7 @@ const lightConfig = {
         {
           destination: 'variables-light.css',
           format: 'css/variables',
+          filter: (token) => token.isSource,
           options: {
             selector: ':root'
           }
@@ -147,7 +154,8 @@ const lightConfig = {
       files: [
         {
           destination: '_variables.scss',
-          format: 'scss/variables'
+          format: 'scss/variables',
+          filter: (token) => token.isSource
         }
       ]
     },
@@ -157,7 +165,8 @@ const lightConfig = {
       files: [
         {
           destination: 'tokens-light.js',
-          format: 'javascript/module'
+          format: 'javascript/module',
+          filter: (token) => token.isSource
         }
       ]
     }
@@ -166,6 +175,13 @@ const lightConfig = {
 
 // Configuration for Dark Theme (Overrides: includes only dark color tokens)
 const darkConfig = {
+  include: [
+    'tokens/global.json',
+    'tokens/Font theme/Baseline.json',
+    'tokens/Typescale/Baseline.json',
+    'tokens/Shape/Baseline.json',
+    'tokens/Monochrome Neutrals/Monochrome LT.json'
+  ],
   source: [
     'tokens/Monochrome Neutrals/Monochrome DT.json'
   ],
@@ -177,6 +193,7 @@ const darkConfig = {
         {
           destination: 'variables-dark.css',
           format: 'css/variables',
+          filter: (token) => token.isSource,
           options: {
             selector: '.dark-theme'
           }
@@ -189,7 +206,8 @@ const darkConfig = {
       files: [
         {
           destination: '_variables-dark.scss',
-          format: 'scss/variables'
+          format: 'scss/variables',
+          filter: (token) => token.isSource
         }
       ]
     },
@@ -199,7 +217,8 @@ const darkConfig = {
       files: [
         {
           destination: 'tokens-dark.js',
-          format: 'javascript/module'
+          format: 'javascript/module',
+          filter: (token) => token.isSource
         }
       ]
     }

@@ -39,7 +39,7 @@
           "com.figma.hiddenFromPublishing": false
         },
         "$type": "dimension",
-        "$value": "1.5rem"
+        "$value": "24px"
       },
       "Tracking": {
         "$extensions": {
@@ -49,7 +49,7 @@
           "com.figma.hiddenFromPublishing": false
         },
         "$type": "dimension",
-        "$value": "0rem"
+        "$value": "0px"
       },
       "Line Height": {
         "$extensions": {
@@ -59,7 +59,7 @@
           "com.figma.hiddenFromPublishing": false
         },
         "$type": "dimension",
-        "$value": "1.75rem"
+        "$value": "28px"
       }
     },
     "Title Medium": {
@@ -101,7 +101,7 @@
           "com.figma.hiddenFromPublishing": false
         },
         "$type": "dimension",
-        "$value": "1rem"
+        "$value": "16px"
       },
       "Tracking": {
         "$extensions": {
@@ -111,7 +111,7 @@
           "com.figma.hiddenFromPublishing": false
         },
         "$type": "dimension",
-        "$value": "0.009rem"
+        "$value": "0.15px"
       },
       "Line Height": {
         "$extensions": {
@@ -121,7 +121,7 @@
           "com.figma.hiddenFromPublishing": false
         },
         "$type": "dimension",
-        "$value": "1.5rem"
+        "$value": "24px"
       }
     },
     "Title Small": {
@@ -163,7 +163,7 @@
           "com.figma.hiddenFromPublishing": false
         },
         "$type": "dimension",
-        "$value": "0.875rem"
+        "$value": "14px"
       },
       "Tracking": {
         "$extensions": {
@@ -173,7 +173,7 @@
           "com.figma.hiddenFromPublishing": false
         },
         "$type": "dimension",
-        "$value": "0.006rem"
+        "$value": "0.1px"
       },
       "Line Height": {
         "$extensions": {
@@ -183,7 +183,7 @@
           "com.figma.hiddenFromPublishing": false
         },
         "$type": "dimension",
-        "$value": "1.25rem"
+        "$value": "20px"
       }
     },
     "Label Large": {
@@ -225,7 +225,7 @@
           "com.figma.hiddenFromPublishing": false
         },
         "$type": "dimension",
-        "$value": "0.875rem"
+        "$value": "14px"
       },
       "Tracking": {
         "$extensions": {
@@ -235,7 +235,7 @@
           "com.figma.hiddenFromPublishing": false
         },
         "$type": "dimension",
-        "$value": "0.006rem"
+        "$value": "0.1px"
       },
       "Line Height": {
         "$extensions": {
@@ -245,7 +245,7 @@
           "com.figma.hiddenFromPublishing": false
         },
         "$type": "dimension",
-        "$value": "1.25rem"
+        "$value": "20px"
       }
     },
     "Label Medium": {
@@ -287,7 +287,7 @@
           "com.figma.hiddenFromPublishing": false
         },
         "$type": "dimension",
-        "$value": "0.75rem"
+        "$value": "12px"
       },
       "Tracking": {
         "$extensions": {
@@ -297,7 +297,7 @@
           "com.figma.hiddenFromPublishing": false
         },
         "$type": "dimension",
-        "$value": "0.031rem"
+        "$value": "0.5px"
       },
       "Line Height": {
         "$extensions": {
@@ -307,7 +307,7 @@
           "com.figma.hiddenFromPublishing": false
         },
         "$type": "dimension",
-        "$value": "1rem"
+        "$value": "16px"
       }
     },
     "Label Small": {
@@ -349,7 +349,7 @@
           "com.figma.hiddenFromPublishing": false
         },
         "$type": "dimension",
-        "$value": "0.688rem"
+        "$value": "11px"
       },
       "Tracking": {
         "$extensions": {
@@ -359,7 +359,7 @@
           "com.figma.hiddenFromPublishing": false
         },
         "$type": "dimension",
-        "$value": "0.031rem"
+        "$value": "0.5px"
       },
       "Line Height": {
         "$extensions": {
@@ -369,7 +369,7 @@
           "com.figma.hiddenFromPublishing": false
         },
         "$type": "dimension",
-        "$value": "1rem"
+        "$value": "16px"
       }
     },
     "Headline Small": {
@@ -411,7 +411,7 @@
           "com.figma.hiddenFromPublishing": false
         },
         "$type": "dimension",
-        "$value": "1.5rem"
+        "$value": "24px"
       },
       "Tracking": {
         "$extensions": {
@@ -421,7 +421,7 @@
           "com.figma.hiddenFromPublishing": false
         },
         "$type": "dimension",
-        "$value": "0rem"
+        "$value": "0px"
       },
       "Line Height": {
         "$extensions": {
@@ -431,7 +431,7 @@
           "com.figma.hiddenFromPublishing": false
         },
         "$type": "dimension",
-        "$value": "2rem"
+        "$value": "32px"
       }
     },
     "Headline Medium": {
@@ -473,7 +473,7 @@
           "com.figma.hiddenFromPublishing": false
         },
         "$type": "dimension",
-        "$value": "1.75rem"
+        "$value": "28px"
       },
       "Tracking": {
         "$extensions": {
@@ -483,7 +483,7 @@
           "com.figma.hiddenFromPublishing": false
         },
         "$type": "dimension",
-        "$value": "0rem"
+        "$value": "0px"
       },
       "Line Height": {
         "$extensions": {
@@ -493,7 +493,7 @@
           "com.figma.hiddenFromPublishing": false
         },
         "$type": "dimension",
-        "$value": "2.25rem"
+        "$value": "36px"
       }
     },
     "Headline Large": {
@@ -535,7 +535,7 @@
           "com.figma.hiddenFromPublishing": false
         },
         "$type": "dimension",
-        "$value": "2rem"
+        "$value": "32px"
       },
       "Tracking": {
         "$extensions": {
@@ -545,7 +545,7 @@
           "com.figma.hiddenFromPublishing": false
         },
         "$type": "dimension",
-        "$value": "0rem"
+        "$value": "0px"
       },
       "Line Height": {
         "$extensions": {
@@ -555,7 +555,7 @@
           "com.figma.hiddenFromPublishing": false
         },
         "$type": "dimension",
-        "$value": "2.5rem"
+        "$value": "40px"
       }
     },
     "Display Small": {
@@ -597,7 +597,7 @@
           "com.figma.hiddenFromPublishing": false
         },
         "$type": "dimension",
-        "$value": "2.25rem"
+        "$value": "36px"
       },
       "Tracking": {
         "$extensions": {
@@ -607,7 +607,7 @@
           "com.figma.hiddenFromPublishing": false
         },
         "$type": "dimension",
-        "$value": "0rem"
+        "$value": "0px"
       },
       "Line Height": {
         "$extensions": {
@@ -617,7 +617,7 @@
           "com.figma.hiddenFromPublishing": false
         },
         "$type": "dimension",
-        "$value": "2.75rem"
+        "$value": "44px"
       }
     },
     "Display Medium": {
@@ -659,7 +659,7 @@
           "com.figma.hiddenFromPublishing": false
         },
         "$type": "dimension",
-        "$value": "2.813rem"
+        "$value": "45px"
       },
       "Line Height": {
         "$extensions": {
@@ -669,7 +669,7 @@
           "com.figma.hiddenFromPublishing": false
         },
         "$type": "dimension",
-        "$value": "3.25rem"
+        "$value": "52px"
       },
       "Tracking": {
         "$extensions": {
@@ -679,7 +679,7 @@
           "com.figma.hiddenFromPublishing": false
         },
         "$type": "dimension",
-        "$value": "0rem"
+        "$value": "0px"
       }
     },
     "Display Large": {
@@ -721,7 +721,7 @@
           "com.figma.hiddenFromPublishing": false
         },
         "$type": "dimension",
-        "$value": "3.563rem"
+        "$value": "57px"
       },
       "Tracking": {
         "$extensions": {
@@ -731,7 +731,7 @@
           "com.figma.hiddenFromPublishing": false
         },
         "$type": "dimension",
-        "$value": "-0.016rem"
+        "$value": "-0.25px"
       },
       "Line Height": {
         "$extensions": {
@@ -741,7 +741,7 @@
           "com.figma.hiddenFromPublishing": false
         },
         "$type": "dimension",
-        "$value": "4rem"
+        "$value": "64px"
       }
     },
     "Body Large": {
@@ -783,7 +783,7 @@
           "com.figma.hiddenFromPublishing": false
         },
         "$type": "dimension",
-        "$value": "1rem"
+        "$value": "16px"
       },
       "Tracking": {
         "$extensions": {
@@ -793,7 +793,7 @@
           "com.figma.hiddenFromPublishing": false
         },
         "$type": "dimension",
-        "$value": "0.031rem"
+        "$value": "0.5px"
       },
       "Line Height": {
         "$extensions": {
@@ -803,7 +803,7 @@
           "com.figma.hiddenFromPublishing": false
         },
         "$type": "dimension",
-        "$value": "1.5rem"
+        "$value": "24px"
       }
     },
     "Body Medium": {
@@ -845,7 +845,7 @@
           "com.figma.hiddenFromPublishing": false
         },
         "$type": "dimension",
-        "$value": "0.875rem"
+        "$value": "14px"
       },
       "Tracking": {
         "$extensions": {
@@ -855,7 +855,7 @@
           "com.figma.hiddenFromPublishing": false
         },
         "$type": "dimension",
-        "$value": "0.016rem"
+        "$value": "0.25px"
       },
       "Line Height": {
         "$extensions": {
@@ -865,7 +865,7 @@
           "com.figma.hiddenFromPublishing": false
         },
         "$type": "dimension",
-        "$value": "1.25rem"
+        "$value": "20px"
       }
     },
     "Body Small": {
@@ -907,7 +907,7 @@
           "com.figma.hiddenFromPublishing": false
         },
         "$type": "dimension",
-        "$value": "0.75rem"
+        "$value": "12px"
       },
       "Tracking": {
         "$extensions": {
@@ -917,7 +917,7 @@
           "com.figma.hiddenFromPublishing": false
         },
         "$type": "dimension",
-        "$value": "0.025rem"
+        "$value": "0.4px"
       },
       "Line Height": {
         "$extensions": {
@@ -927,7 +927,7 @@
           "com.figma.hiddenFromPublishing": false
         },
         "$type": "dimension",
-        "$value": "1rem"
+        "$value": "16px"
       }
     }
   }
